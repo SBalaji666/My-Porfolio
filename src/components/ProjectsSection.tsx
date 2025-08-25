@@ -1,27 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, Star } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ExternalLink, Github, Star } from "lucide-react";
 
 const featuredProjects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    github: '#',
-    live: '#',
+    title: "E-Commerce Platform",
+    description:
+      "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+    image:
+      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    github: "#",
+    live: "#",
     featured: true,
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL'],
-    github: '#',
-    live: '#',
+    title: "Task Management App",
+    description:
+      "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
+    github: "#",
+    live: "#",
     featured: true,
   },
 ];
@@ -29,35 +33,30 @@ const featuredProjects = [
 const otherProjects = [
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather application with location-based forecasts and interactive charts.',
-    technologies: ['React', 'Chart.js', 'OpenWeather API'],
-    github: '#',
-    live: '#',
+    title: "Weather Dashboard",
+    description:
+      "Beautiful weather application with location-based forecasts and interactive charts.",
+    technologies: ["React", "Chart.js", "OpenWeather API"],
+    github: "#",
+    live: "#",
   },
   {
     id: 4,
-    title: 'Blog Platform',
-    description: 'Modern blogging platform with markdown support and user authentication.',
-    technologies: ['Next.js', 'MongoDB', 'NextAuth'],
-    github: '#',
-    live: '#',
+    title: "Blog Platform",
+    description:
+      "Modern blogging platform with markdown support and user authentication.",
+    technologies: ["Next.js", "MongoDB", "NextAuth"],
+    github: "#",
+    live: "#",
   },
   {
     id: 5,
-    title: 'Portfolio Website',
-    description: 'Responsive portfolio website with smooth animations and dark mode support.',
-    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-    github: '#',
-    live: '#',
-  },
-  {
-    id: 6,
-    title: 'Chat Application',
-    description: 'Real-time chat application with rooms, file sharing, and emoji support.',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-    github: '#',
-    live: '#',
+    title: "Portfolio Website",
+    description:
+      "Responsive portfolio website with smooth animations and dark mode support.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    github: "#",
+    live: "#",
   },
 ];
 
@@ -68,7 +67,10 @@ export const ProjectsSection: React.FC = () => {
   });
 
   return (
-    <section id="projects" className="section-padding bg-gray-50 dark:bg-gray-800/50">
+    <section
+      id="projects"
+      className="section-padding bg-gray-50 dark:bg-gray-800/50"
+    >
       <div className="container" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -100,7 +102,7 @@ export const ProjectsSection: React.FC = () => {
                   Featured
                 </div>
               </div>
-              
+
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -109,16 +111,16 @@ export const ProjectsSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
@@ -129,7 +131,7 @@ export const ProjectsSection: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4">
                   <a
                     href={project.github}
@@ -160,7 +162,7 @@ export const ProjectsSection: React.FC = () => {
           <h3 className="text-3xl font-bold mb-8 text-center gradient-text">
             Other Projects
           </h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project, index) => (
               <motion.div
@@ -173,11 +175,11 @@ export const ProjectsSection: React.FC = () => {
                 <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {project.title}
                 </h4>
-                
+
                 <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
@@ -188,7 +190,7 @@ export const ProjectsSection: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-3">
                   <a
                     href={project.github}
