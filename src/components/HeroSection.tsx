@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
           >
             Passionate about creating exceptional web experiences with modern
             technologies. Specializing in React, Node.js, MongoDB, and
-            Express.js with 2.5+ years of experience.
+            Express.js with 2.6+ years of experience.
           </motion.p>
 
           {/* CTA Buttons */}

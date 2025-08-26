@@ -6,26 +6,26 @@ import { ExternalLink, Github, Star } from "lucide-react";
 const featuredProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "House Marketplace",
     description:
-      "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+      "A real estate marketplace with OAuth authentication, Leaflet map integration, user authentication, and product listing functionality.",
     image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    github: "#",
-    live: "#",
+      "https://images.pexels.com/photos/8469940/pexels-photo-8469940.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["React", "OAuth", "Leaflet"],
+    github: "https://github.com/SBalaji666/house-marketplace",
+    live: "https://house-marketplace-olive-six.vercel.app/",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "GitHub Finder App",
     description:
-      "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "An application to search and display GitHub user profiles and repositories with real-time updates and user-friendly interface.",
     image:
-      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
-    github: "#",
-    live: "#",
+      "https://images.pexels.com/photos/4816921/pexels-photo-4816921.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["React", "TypeScript", "GitHub API"],
+    github: "https://github.com/SBalaji666/React-github-finder-app",
+    live: "https://react-github-finder-app-ashen.vercel.app/",
     featured: true,
   },
 ];
@@ -33,21 +33,23 @@ const featuredProjects = [
 const otherProjects = [
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "React Feedback App",
     description:
-      "Beautiful weather application with location-based forecasts and interactive charts.",
-    technologies: ["React", "Chart.js", "OpenWeather API"],
-    github: "#",
-    live: "#",
+      "A user-friendly application for collecting and displaying feedback with interactive forms and real-time updates.",
+    technologies: ["React", "Tailwind Css", "Node.js"],
+    github: "https://github.com/SBalaji666/React-Feedback-App",
+    live: "https://my-react-feedback-app.netlify.app/",
+    featured: false,
   },
   {
     id: 4,
-    title: "Blog Platform",
+    title: "Redux Blog Post",
     description:
-      "Modern blogging platform with markdown support and user authentication.",
-    technologies: ["Next.js", "MongoDB", "NextAuth"],
+      "A modern blog post platform with markdown support, state management using Redux, and user authentication.",
+    technologies: ["React", "Redux", "Tailwind Css"],
     github: "#",
     live: "#",
+    featured: false,
   },
   {
     id: 5,
@@ -55,8 +57,8 @@ const otherProjects = [
     description:
       "Responsive portfolio website with smooth animations and dark mode support.",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/SBalaji666/My-Porfolio",
+    live: "https://balajisrinivasan.vercel.app/",
   },
 ];
 
@@ -134,6 +136,7 @@ export const ProjectsSection: React.FC = () => {
 
                 <div className="flex gap-4">
                   <a
+                    target="_blank"
                     href={project.github}
                     className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-300"
                   >
@@ -141,6 +144,7 @@ export const ProjectsSection: React.FC = () => {
                     Code
                   </a>
                   <a
+                    target="_blank"
                     href={project.live}
                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   >
@@ -193,6 +197,7 @@ export const ProjectsSection: React.FC = () => {
 
                 <div className="flex gap-3">
                   <a
+                    target="_blank"
                     href={project.github}
                     className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
                   >
@@ -200,6 +205,7 @@ export const ProjectsSection: React.FC = () => {
                     <span className="text-sm">Code</span>
                   </a>
                   <a
+                    target="_blank"
                     href={project.live}
                     className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300"
                   >

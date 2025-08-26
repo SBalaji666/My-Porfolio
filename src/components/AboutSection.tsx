@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { User, Award, Coffee, Heart, TrendingUp } from "lucide-react";
+import { User, Award, Coffee, TrendingUp, Code } from "lucide-react";
 
 const stats = [
-  { icon: Award, label: "Years Experience", value: "3+" },
-  { icon: Coffee, label: "Projects Completed", value: "50+" },
-  { icon: Heart, label: "Happy Clients", value: "30+" },
-  { icon: User, label: "Technologies Mastered", value: "15+" },
+  { icon: Award, label: "Years Experience", value: "2.6+" },
+  { icon: Coffee, label: "Projects Completed", value: "10+" },
+  { icon: Code, label: "Hours of Code", value: "1000+" },
+  { icon: User, label: "Technologies Mastered", value: "10+" },
 ];
 
 export const AboutSection: React.FC = () => {
@@ -99,7 +99,7 @@ export const AboutSection: React.FC = () => {
 
             <div className="space-y-4 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
               <p>
-                With over 3 years of experience in full-stack development, I
+                With over 2.6+ years of experience in full-stack development, I
                 specialize in creating robust, scalable web applications using
                 the MERN stack. My journey began with a passion for
                 problem-solving and has evolved into expertise in modern web
