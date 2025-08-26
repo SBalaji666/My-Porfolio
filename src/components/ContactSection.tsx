@@ -18,28 +18,39 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "alex.johnson@email.com",
-    href: "mailto:alex.johnson@email.com",
+    value: "balajisrinivasan.dev@gmail.com",
+    href: "mailto:balajisrinivasan.dev@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+91 7904983183",
+    href: "tel:+917904983183",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Chennai, TN",
     href: "#",
   },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/SBalaji666", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/balaji-s-b13467205",
+    label: "LinkedIn",
+  },
   { icon: Twitter, href: "#", label: "Twitter" },
 ];
+
+const emptyStateObject = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 export const ContactSection: React.FC = () => {
   const [ref, inView] = useInView({
@@ -47,12 +58,7 @@ export const ContactSection: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(emptyStateObject);
 
   const [state, handleSubmit] = useForm("mqadzvbb");
   const [showSuccess, setShowSuccess] = useState(false);
@@ -65,6 +71,7 @@ export const ContactSection: React.FC = () => {
 
   const resetForm = () => {
     setShowSuccess(false);
+    setFormData(emptyStateObject);
   };
 
   const handleChange = (

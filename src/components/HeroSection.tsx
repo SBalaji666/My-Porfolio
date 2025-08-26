@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
+import {
+  ChevronDown,
+  Github,
+  Linkedin,
+  Mail,
+  Code2,
+  Download,
+} from "lucide-react";
 import { useInfiniteTypewriter } from "../hooks/useInfiniteTypewriter";
 import { ParticleRain } from "./ParticleRain";
 
@@ -130,9 +137,14 @@ export const HeroSection: React.FC = () => {
               </span>
             </button>
 
-            <button className="btn-secondary hover-lift">
+            <a
+              href="/src/images/BalajiSrinvasanResume.pdf"
+              className="btn-secondary hover-lift flex items-center justify-center gap-3 group"
+              download
+            >
+              <Download className="w-6 h-6 group-hover:animate-bounce" />
               Download Resume
-            </button>
+            </a>
           </motion.div>
 
           {/* Social Links */}
@@ -143,9 +155,21 @@ export const HeroSection: React.FC = () => {
             className="flex justify-center gap-6 mb-12 lg:mb-20"
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" },
+              {
+                icon: Github,
+                href: "https://github.com/SBalaji666",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/balaji-s-b13467205",
+                label: "LinkedIn",
+              },
+              {
+                icon: Mail,
+                href: "mailto:balajisrinivasan.dev@gmail.com",
+                label: "Email",
+              },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
